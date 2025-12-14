@@ -1,11 +1,21 @@
+in RHEL machine:
+------------------
 https://docs.docker.com/engine/install/rhel/#install-using-the-repository
-
 sudo dnf -y install dnf-plugins-core
 sudo dnf config-manager --add-repo https://download.docker.com/linux/rhel/docker-ce.repo
-
 sudo dnf install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
-
 sudo systemctl enable --now docker
+
+in AWS linux machine:
+---------------------
+[ec2-user@ip-172-31-28-165 ~]$ sudo su - root
+[root@ip-172-31-28-165 ~]# yum install docker
+# systemctl enable --now docker
+
+
+
+
+
 
 
 docker network create elastic
